@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6,
 /* Text elements */
 p, blockquote, pre,
 /* Inline elements */
-a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,
+a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, s, samp, small, strike, strong, sub, sup, tt, var,
 /* Styling elements */
 b, u, i,
 /* Lists */
@@ -36,7 +36,7 @@ article, aside, canvas, details, embed, figure, figcaption, footer, header, hgro
 input[type="radio"] {
   align-self: center; }
 
-a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var {
+a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, s, samp, small, strike, strong, sub, sup, tt, var {
   display: inline; }
   
 #demo, input[type=date], .words, .wordGloss {
@@ -51,7 +51,7 @@ ol, ul {
 #inputArea, #jsonArea {
   padding: 0.5rem; }
 
-blockquote, q {
+blockquote {
   quotes: none; }
 
 #data {
@@ -72,7 +72,6 @@ blockquote, q {
 
 #visualizations .visualization {
   flex-grow: 1;
-  padding: 1em;
   margin: .5em 0;
   border: 1px solid black;
   border-radius: 5px;
@@ -150,3 +149,28 @@ html, body {
   background: rgba(255,255,100,.7);
 }
 
+.visualization > h2 { 
+  background:gray; 
+  color:white;
+  font-weight:bold;
+  text-align:center;
+  background-image: linear-gradient(#444,#222);
+  margin:0;
+}
+
+#interlinearGloss .phrase  { 
+  padding: 1em;
+}
+
+#interlinearGloss .phrase p.transcription { 
+  font-weight:bold; 
+  font-family:sans-serif;; 
+}
+
+#interlinearGloss .phrase p.translation:before { 
+  content: '‘';
+}
+
+#interlinearGloss .phrase p.translation:after { 
+  content: '’';
+}
