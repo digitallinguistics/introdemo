@@ -6,6 +6,8 @@ var nodes = {
   jsonArea: document.querySelector('#jsonArea'),
   transcriptionBox: document.querySelector('#transcriptionBox'),
   translationBox: document.querySelector('#translationBox'),
+  transcriptionDisplay: document.querySelector('#interlinearGloss .transcription'),
+  translationDisplay: document.querySelector('#interlinearGloss .translation'),
   wordTemplate: document.querySelector('#wordTemplate'),
   wordsWrapper: document.querySelector('.words')
 };
@@ -38,7 +40,8 @@ function displayDictionary() {
 
 // Displays the interlinear gloss visualization, using data from the phrase object
 function displayInterlinear() {
-  
+  nodes.translationDisplay.textContent = phrase.translation;
+  nodes.transcriptionDisplay.textContent = phrase.transcription;
 };
 
 // Displays the JSON visualization, using data from the phrase object
