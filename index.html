@@ -2,124 +2,75 @@
 <html>
 <head>
   <meta charset=utf-8>
-  <title>
-wugbot data demo  
-  </title>
-  <style>
-
-header { 
-  font-size: small;
-}
-
-body { 
-  display: flex;
-  background: rgba(210,210,210, .7);
-  margin:0;
-  padding:1em;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-main { 
-  flex:1;
-  background: rgba(245,245,245, 1);
-  display: flex;
-  padding: 2em;
-  min-height: 100%;
-  min-height: 100%;
-}
-
-
-section#data {
-  display:flex;
-  overflow:hidden;
-  flex-basis:main-width;
-  flex: 1;
-}
-
-section#data textarea {
-  width: 80%;
-  margin: 0 auto;
-  padding: .5em;
-  font-family: monospace;
-  background: #333;
-  color: rgb(0,255,0);
-  line-height: 1.5;
-}
-
-section#viz {
-  display:flex;
-  flex-direction: column;
-  flex: 2;
-}
-
-section#viz .example { 
-  flex:1;
-  background:white;
-  padding: 1em;
-  margin: 1em;
-}
-
-.partOfSpeech {
-  font-variant: small-caps;
-}
-  </style>
+  <meta name=author content='The Wugbot Team'>
+  <meta name=description content='A demo of the digital representation of linguistic structure'>
+  <meta name=keywords content='linguistics, data modeling, digital linguistics, wugbot, interlinear gloss'>
+  <title>Visualizing Linguistic Data Structures</title>
+  
+  <link rel=stylesheet type='text/css' href='css/demo.css'>
 </head>
+
 <body>
-<header>
-<h1>
-wugbot data demo: rendering a word
-</h1>
-</header>
+  <header>
+    <h1>Digitally Representing Linguistic Structures</h1>
+  </header>
+  
+  <section id=demo>
+    <section id=data>
+      <section id=inputArea>
+        <label for=transcriptionBox>
+          <p>Phrase</p>
+          <input id=transcriptionBox type=text>
+        </label>
+        
+        <ol class=words></ol>
+     
+        <label for=translationBox>
+          <p>Translation</p>
+          <input id=translationBox type=text>
+        </label>
+      </section>
+      
+      <pre id=jsonArea></pre>
+    </section>
+  
+    <section id=visualizations>
+      <div class=visualization id=interlinearGloss>
+        <h2>Interlinear Gloss</h2>
+        <div class=phrase>
+          <p class=transcription></p>
+          <ol class=words></ol>
+          <p class=translation></p>
+        </div>
+      </div>
+      
+      <div class=visualization id=stats>
+        <h2>Stats</h2>
+      </div>
 
-<main>
-
-
-<section id=data>
-<textarea>
-{ 
-  "token" : "hola",
-  "gloss" : "hello",
-  "partOfSpeech" : "interjection"
-}
-</textarea>
-</section>
-
-<section id=viz>
-  <div class=example id=example1>
-    <h1><span class=token> </span> <span class=partOfSpeech></span></h1>
-    <p class=gloss></p>
-  </div>
-
-  <div class=example id=example2>
-    <p><span class=token></span> &middot; <span class=partOfSpeech></span> <q class=gloss></q></p>
-  </div>
-
-  <div class=example id=example3>
-    <ul>
-      <li><strong class=token></strong> [<span class=partOfSpeech></span>] ‘<span class=gloss></span>’
-    </ul>
-  </div>
-</section>
-
-<script>
-var textarea = document.querySelector('#data textarea');
-var example1 = document.querySelector('#viz #example1');
-var example2 = document.querySelector('#viz #example2');
-var example3 = document.querySelector('#viz #example3');
-
-var examples = [example1, example2, example3];
-
-var word = JSON.parse(textarea.value);
-
-examples.forEach(function(example){
-  example.querySelector('.token').textContent = word.token;
-  example.querySelector('.partOfSpeech').textContent = word.partOfSpeech;
-  example.querySelector('.gloss').textContent = word.gloss;
-})
-
-</script>
-
-</main>
+      <div class=visualization id=dictionary>
+        <h2>Dictionary</h2>
+      </div>
+    </section>
+  </section>
+  
+  <a id=downloadButton download='mydata.json'>Download your data!</a>
+  
+  <!-- This template is not the full word template from the spec. This one is designed for pedagogical purposes instead. -->
+  <template id=wordTemplate>
+    <li class=word>
+      <p class=wordToken></p>
+      <input class=wordGloss placeholder="gloss">
+      <select class=wordPOS>
+        <option value=noun>n.</option>
+        <option value=verb>v.</option>
+        <option value=adjective>adj.</option>
+        <option value=other>other</option>
+      </select>
+    </li>
+  </template>
+  
+  <script src='js/script.js'></script>
+  <script src='js/demo.js'></script>
 </body>
 </html>

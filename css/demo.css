@@ -1,0 +1,176 @@
+/* CSS reset */
+/* General elements */
+html, body, div, span, applet, object, iframe,
+/* Headers */
+h1, h2, h3, h4, h5, h6,
+/* Text elements */
+p, blockquote, pre,
+/* Inline elements */
+a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, s, samp, small, strike, strong, sub, sup, tt, var,
+/* Styling elements */
+b, u, i,
+/* Lists */
+dl, dt, dd, ol, ul, li,
+/* Forms & Tables */
+button, caption, input, fieldset, form, label, legend, table, textarea, tbody, tfoot, thead, tr, th, td,
+/* Semantic elements */
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: none;
+  box-sizing: border-box;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  font-size: 100%;
+  font-weight: normal;
+  font: inherit;
+  line-height: 150%;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+  /* font-family has to be last in this declaration */
+  font-family: "Gentium Plus", "Charis SIL", "Doulos SIL", "Lucida Sans Unicode", "Times New Roman", serif, sans-serif; }
+
+/* Styling by CSS rule (ordered alphabetically by CSS rule) */
+input[type="radio"] {
+  align-self: center; }
+
+a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, s, samp, small, strike, strong, sub, sup, tt, var {
+  display: inline; }
+  
+#demo, input[type=date], .words, .wordGloss {
+  flex-direction: row; }
+
+#demo, .words {
+  flex-wrap: wrap; }
+
+ol, ul {
+  list-style: none; }
+
+#inputArea, #jsonArea {
+  padding: 0.5rem; }
+
+blockquote {
+  quotes: none; }
+
+#data {
+  flex: 7 ;
+  flex-direction: column;
+}
+
+#visualizations {
+  display: flex;
+  padding: 1em;
+
+  flex: 6;
+ 
+
+  flex-flow: column wrap;
+  height: 100vh;
+}
+
+#visualizations .visualization {
+  flex-grow: 1;
+  margin: .5em 0;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.words {
+  padding: 0 0.5rem; }
+
+.word {
+  margin-left: 1em; }
+
+.word .wordPOS {
+  font-weight: bold;
+}
+
+
+/* Styling by classes or element type (ordered alphabetically by class name / element type) */
+a, a:hover, a:visited, a:active {
+  background: transparent;
+  color: inherit;
+  text-decoration: none: }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+h1 {
+  font-weight: bold;
+  text-align: center; }
+
+input {
+  background-color: lightgray; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table; }
+
+tbody {
+  display: table-row-group; }
+
+td, td {
+  vertical-align: middle; }
+
+td {
+  display: table-cell; }
+
+th {
+  display: table-cell;
+  text-align: center; }
+
+thead {
+  display: table-header-group; }
+
+tr {
+  display: table-row; }
+
+/* Styling by DOM or element (ordered by DOM hierarchy) */
+html, body {
+  background: white; }
+
+#demo {
+  height: 100%; }
+
+#jsonArea {
+  background-color: black;
+  color: green;
+  font-family: 'Courier New';
+  font-weight: bold;
+  margin: 0.5rem;
+  overflow-x: scroll; }
+
+
+:focus {
+  background: rgba(255,255,100,.7);
+}
+
+.visualization > h2 { 
+  background:gray; 
+  color:white;
+  font-weight:bold;
+  text-align:center;
+  background-image: linear-gradient(#444,#222);
+  margin:0;
+}
+
+#interlinearGloss .phrase  { 
+  padding: 1em;
+}
+
+#interlinearGloss .phrase p.transcription { 
+  font-weight:bold; 
+  font-family:sans-serif;; 
+}
+
+#interlinearGloss .phrase p.translation:before { 
+  content: '‘';
+}
+
+#interlinearGloss .phrase p.translation:after { 
+  content: '’';
+}
