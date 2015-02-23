@@ -84,7 +84,7 @@ function render(ev) {
     displayPhrase(); 
   }
   if (ev.target.className === 'wordGloss' && ev.target.textContent === '') {
-    ev.target.textContent = placeholderText;
+    ev.target.textContent = "\u00A0";
   }
   displayJSON();
   displayInterlinear();
@@ -120,7 +120,7 @@ function updatePhrase() {
     var wordIndex = wordObjects[i].id.replace('word_', '');
     var gloss = document.querySelector('#' + wordObjects[i].id + ' .wordGloss').textContent;
     if (gloss !== placeholderText) {
-      phrase.words[wordIndex].gloss = gloss;
+      phrase.words[wordIndex].gloss = gloss.trim();
     }
   }
 };
