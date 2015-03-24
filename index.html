@@ -60,8 +60,9 @@
   <template id=wordTemplate>
     <li class=word>
       <p class=wordToken></p>
-      <input class=wordGloss placeholder="gloss">
+      <p class=wordGloss contenteditable spellcheck=false>gloss</p>
       <select class=wordPOS>
+        <option value=select>p.o.s.</option>
         <option value=noun>n.</option>
         <option value=verb>v.</option>
         <option value=adjective>adj.</option>
@@ -70,7 +71,6 @@
     </li>
   </template>
   
-  <script src='js/script.js'></script>
   <script src='js/demo.js'></script>
 </body>
 </html>
