@@ -20,14 +20,14 @@
       <section id=inputArea>
         <label for=transcriptionBox>
           <p>Phrase</p>
-          <input id=transcriptionBox type=text>
+          <input id=transcriptionBox type=text class=unicode>
         </label>
         
         <ol class=words></ol>
      
         <label for=translationBox>
           <p>Translation</p>
-          <input id=translationBox type=text>
+          <input id=translationBox type=text class=unicode>
         </label>
       </section>
       
@@ -35,12 +35,12 @@
     </section>
   
     <section id=visualizations>
-      <div class=visualization id=interlinearGloss>
+      <div id=interlinearGloss class=visualization>
         <h2>Interlinear Gloss</h2>
         <div class=phrase>
-          <p class=transcription></p>
+          <p class='transcription unicode'></p>
           <ol class=words></ol>
-          <p class=translation></p>
+          <p class='translation unicode'></p>
         </div>
       </div>
       
@@ -57,10 +57,10 @@
   <a id=downloadButton download='mydata.json'>Download your data!</a>
   
   <!-- This template is not the full word template from the spec. This one is designed for pedagogical purposes instead. -->
-  <template id=wordTemplate>
+  <template id=wordInputTemplate>
     <li class=word>
-      <p class=wordToken></p>
-      <p class=wordGloss contenteditable spellcheck=false>gloss</p>
+      <p class='wordToken unicode'></p>
+      <p class='wordGloss unicode' contenteditable spellcheck=false>gloss</p>
       <select class=wordPOS>
         <option value=select>p.o.s.</option>
         <option value=noun>n.</option>
@@ -68,6 +68,14 @@
         <option value=adjective>adj.</option>
         <option value=other>other</option>
       </select>
+    </li>
+  </template>
+  
+  <template id=wordTemplate>
+    <li class=word>
+      <p class='wordToken unicode'></p>
+      <p class='wordGloss unicode'></p>
+      <p class='wordPOS'></p>
     </li>
   </template>
   

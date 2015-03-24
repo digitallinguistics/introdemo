@@ -80,7 +80,7 @@ blockquote {
 .word {
   margin-left: 1em; }
 
-.word .wordPOS {
+#inputArea .word .wordPOS {
   font-weight: bold;
 }
 
@@ -99,7 +99,7 @@ h1 {
   font-weight: bold;
   text-align: center; }
 
-input, .wordGloss {
+input, #inputArea .wordGloss {
   background-color: lightgray; }
 
 table {
@@ -125,6 +125,10 @@ thead {
 
 tr {
   display: table-row; }
+
+.unicode {
+  font-family: 'Gentium Plus';
+}
 
 /* Styling by DOM or element (ordered by DOM hierarchy) */
 html, body {
@@ -160,8 +164,8 @@ html, body {
 }
 
 #interlinearGloss .phrase p.transcription { 
-  font-weight:bold; 
-  font-family:sans-serif;; 
+  font-weight:bold;
+  font-style: italic;
 }
 
 #interlinearGloss .phrase p.translation:before { 
