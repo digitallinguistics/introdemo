@@ -2,6 +2,7 @@
 
 var nodes = {
   charCount: document.querySelector('#charCount'),
+  entries: document.querySelector('#entries'),
   transcriptionBox: document.querySelector('#transcriptionBox'),
   translationBox: document.querySelector('#translationBox'),
   wordsArea: document.querySelector('#inputArea .words')
@@ -22,7 +23,17 @@ function Word(token) {
 };
 
 // Functions
-function displayDict() {};
+function displayDict() {
+  entries.innerHTML = '';
+  
+  phrase.words.forEach(function(word) {
+    var entry = document.querySelector('#entry').content.cloneNode(true);
+    entry.querySelector('.headword').textContent = word.token;
+    entry.querySelector('.wordPOS').textContent = word.partOfSpeech;
+    entry.querySelector('.definition').textContent = word.gloss;
+    entries.appendChild(entry);
+  });
+};
 
 function displayIL() {
   document.querySelector('.transcription').textContent = phrase.transcription;

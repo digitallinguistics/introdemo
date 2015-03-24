@@ -39,8 +39,19 @@ input[type="radio"] {
 a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, s, samp, small, strike, strong, sub, sup, tt, var {
   display: inline; }
   
-#demo, input[type=date], .words, .wordGloss {
+#demo, .entry, input[type=date], .words, .wordGloss {
   flex-direction: row; }
+
+#dictionary li {
+  padding: 0.25rem; }
+  
+.headword {
+  font-weight: bold;
+  color: #3f93f9; }
+
+.entry .wordPOS {
+  font-style: italic;
+  padding: 0 0.5rem; }
 
 #demo, .words {
   flex-wrap: wrap; }
@@ -55,20 +66,14 @@ blockquote {
   quotes: none; }
 
 #data {
-  flex: 7 ;
   flex-direction: column;
+  width: 50%;
 }
 
 #visualizations {
-  display: flex;
-  padding: 1em;
-  flex: 6;
-  flex-flow: column wrap;
-  height: 100vh;
-}
+  width: 50%; }
 
 #visualizations .visualization {
-  flex-grow: 1;
   margin: .5em 0;
   border: 1px solid black;
   border-radius: 5px;
@@ -134,9 +139,6 @@ tr {
 html, body {
   background: white; }
 
-#demo {
-  height: 100%; }
-
 #jsonArea {
   background-color: black;
   color: green;
@@ -198,3 +200,11 @@ p {
   align-items: flex-start;
   flex-direction: column; 
   flex-wrap: wrap; }
+
+#visualizations {
+  flex-direction: column;
+  flex-wrap: nowrap; }
+
+#stats {
+  flex-basis: 200px;
+}
