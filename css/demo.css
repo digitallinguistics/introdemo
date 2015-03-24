@@ -182,3 +182,19 @@ html, body {
 
 p {
   display: inline-block; }
+  
+#downloadButton {
+  align-self: center;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem; }
+  
+#charCount li {
+  padding: 0.25rem 0.5rem; }
+
+#charCount {
+  align-items: flex-start;
+  flex-direction: column; 
+  flex-wrap: wrap; }

@@ -31,6 +31,8 @@
         </label>
       </section>
       
+      <button id=downloadButton>Download your data!</button>
+      
       <pre id=jsonArea></pre>
     </section>
   
@@ -45,7 +47,8 @@
       </div>
       
       <div class=visualization id=stats>
-        <h2>Stats</h2>
+        <h2>Phoneme Count</h2>
+        <ul id=charCount></ul>
       </div>
 
       <div class=visualization id=dictionary>
@@ -53,8 +56,6 @@
       </div>
     </section>
   </section>
-  
-  <a id=downloadButton download='mydata.json'>Download your data!</a>
   
   <!-- This template is not the full word template from the spec. This one is designed for pedagogical purposes instead. -->
   <template id=wordInputTemplate>
