@@ -7,25 +7,29 @@
   <meta name=keywords content='linguistics, data modeling, digital linguistics, wugbot, interlinear gloss'>
   <title>Visualizing Linguistic Data Structures</title>
   
+  <script type="text/javascript" src="js/intro.js-1.0.0/intro.js"></script>
+  <link href="js/intro.js-1.0.0/introjs.css" rel="stylesheet">
+  
   <link rel=stylesheet type='text/css' href='css/demo.css'>
+  
 </head>
 
 <body>
-  <header>
+  <header id=header>
     <h1>Digitally Representing Linguistic Structures</h1>
   </header>
   
   <section id=demo>
     <section id=data>
       <section id=inputArea>
-        <label for=transcriptionBox>
+        <label id=transcriptionLabel for=transcriptionBox>
           <p>Phrase</p>
           <input id=transcriptionBox type=text class=unicode>
         </label>
         
         <ol class=words></ol>
      
-        <label for=translationBox>
+        <label id=translationLabel for=translationBox>
           <p>Translation</p>
           <input id=translationBox type=text class=unicode>
         </label>

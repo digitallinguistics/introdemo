@@ -1,0 +1,6 @@
+moving:push is to pull
+  tf motivating:encourage is to incentivize
+  tf reason:cause is to purpose
+    tf why:how so is to wherefore
+    tf explaining:describing is to justifying
+    tf reasoning:inductive is to deductive
