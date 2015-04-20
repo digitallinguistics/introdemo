@@ -135,8 +135,8 @@ function update() {
 };
 
 function runDemo() {
-  var introdemo = introJs();
-  introdemo.setOptions({
+  var introDemo = introJs();
+  introDemo.setOptions({
     steps: [
       {
         element: '#header',
@@ -201,10 +201,10 @@ function runDemo() {
         
         var exampleGlosses=['This','sentence','is','an','example'];
         var examplePosIndeces=[3,1,2,3,1];
-        var glossBoxes=Array.prototype.slice.call(document.querySelectorAll('#inputArea .wordGloss')).forEach(function(glossBox, i) {
+	Array.prototype.slice.call(document.querySelectorAll('#inputArea .wordGloss')).forEach(function(glossBox, i) {
           glossBox.textContent=exampleGlosses[i];
         }); 
-        var posBoxes=Array.prototype.slice.call(document.querySelectorAll('#inputArea .wordPOS')).forEach(function(posBox, i) {
+	Array.prototype.slice.call(document.querySelectorAll('#inputArea .wordPOS')).forEach(function(posBox, i) {
           posBox.selectedIndex=examplePosIndeces[i];
         });
         
@@ -212,7 +212,6 @@ function runDemo() {
         updateWords();
       }
   }).start();
-
 }
 // Event listeners
 document.querySelector('#downloadButton').addEventListener('click', download);
